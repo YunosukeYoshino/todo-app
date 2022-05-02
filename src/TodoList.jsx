@@ -8,8 +8,9 @@ export const TodoList = ({ todo, deleteHandleClick, editClick }) => {
         key={todo.id}
         className="mt-6  bg-white p-6 rounded-md text-gray-500 shadow-lg"
       >
-        <span>{todo.title}</span>
-        <select name="status" value={todo.status}>
+        <span className="mr-3">ID:{todo.id}</span>
+        <span className="mr-3">{todo.title}</span>
+        <select className="mr-3" name="status" value={todo.status}>
           <Filter />
         </select>
         <button
