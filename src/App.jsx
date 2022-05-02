@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { InputForm } from "./Input";
 import { TodoList } from "./TodoList";
 import { EditForm } from "./EditForm";
-
+import "./style.css";
 export const App = () => {
   const [todoItems, setTodoItems] = useState([]);
   const [todoTitle, setTodoTitle] = useState([]);
@@ -64,7 +64,7 @@ export const App = () => {
     onClickUpdate(currentTodo.id, currentTodo);
   };
   return (
-    <div className="wrap">
+    <div className="flex flex-col w-full  items-center justify-center">
       {isEditable ? (
         <>
           <EditForm
@@ -76,13 +76,17 @@ export const App = () => {
         </>
       ) : (
         <>
-          <h1>ToDoList</h1>
+          <nav class="w-full bg-pink-300 py-4">
+            <h1 className="text-white text-center text-2xl font-bold">
+              ToDoList
+            </h1>
+          </nav>
           <InputForm
             onClick={handleSetTodoTitle}
             value={todoTitle}
             onChange={onChangeToDoText}
           />
-          <ul className="listWrap">
+          <ul className="listWrap w-9/12">
             {todoItems.map((todo) => (
               <TodoList
                 todo={todo}
