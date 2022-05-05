@@ -76,7 +76,7 @@ export const App = () => {
         </>
       ) : (
         <>
-          <nav class="w-full bg-pink-300 py-4">
+          <nav className="w-full bg-pink-300 py-4">
             <h1 className="text-white text-center text-2xl font-bold">
               ToDoList
             </h1>
@@ -87,13 +87,11 @@ export const App = () => {
             onChange={onChangeToDoText}
           />
           <ul className="listWrap w-9/12">
-            {todoItems.map((todo) => (
-              <TodoList
-                todo={todo}
-                editClick={EditHandleClick}
-                deleteHandleClick={DeleteHandleClick}
-              />
-            ))}
+            <TodoList
+              todoItems={todoItems}
+              editClick={EditHandleClick}
+              deleteHandleClick={DeleteHandleClick}
+            />
           </ul>
         </>
       )}

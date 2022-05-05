@@ -3,7 +3,7 @@ import React from "react";
 export const EditForm = ({ value, setEditable, onChange, onClickUpdate }) => {
   return (
     <>
-      <nav class="w-full bg-pink-300 py-4">
+      <nav className="w-full bg-pink-300 py-4">
         <h1 className="text-white text-center text-2xl font-bold">
           todoを編集する
         </h1>
